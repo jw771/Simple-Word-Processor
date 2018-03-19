@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Editor</title>
+
+    <script>
+        function makeBold() {
+            if (document.getElementById("areaDiv").style.fontWeight == "bold") {
+                document.getElementById("areaDiv").style.fontWeight = "normal";
+            } else {
+                document.getElementById("areaDiv").style.fontWeight = "bold";
+            }
+        }
+
+        function makeItalic() {
+            if (document.getElementById("areaDiv").style.fontStyle == "italic") {
+                document.getElementById("areaDiv").style.fontStyle = "normal";
+            } else {
+                document.getElementById("areaDiv").style.fontStyle = "italic";
+            }
+        }
+
+        function makeUnderline() {
+            if (document.getElementById("areaDiv").style.textDecoration == "underline") {
+                document.getElementById("areaDiv").style.textDecoration = "none";
+            } else {
+                document.getElementById("areaDiv").style.textDecoration = "underline";
+            }
+        }
+
+        function makeBlack() {
+            document.getElementById("areaDiv").style.color = "black"
+        }
+
+        function makeWhite() {
+            document.getElementById("areaDiv").style.color = "white"
+        }
+
+        function makeGreen() {
+            document.getElementById("areaDiv").style.color = "green"
+        }
+
+        function makeBlue() {
+            document.getElementById("areaDiv").style.color = "blue"
+        }
+
+        function makeArial() {
+            document.getElementById("areaDiv").style.fontFamily = "Arial,sans-serif"
+        }
+
+        function makeTimes() {
+            document.getElementById("areaDiv").style.fontFamily = "Times New Roman,serif"
+        }
+
+        function makeComic() {
+            document.getElementById("areaDiv").style.fontFamily = "Comic Sans MS,sans-serif"
+        }
+
+        function makeCourier() {
+            document.getElementById("areaDiv").style.fontFamily = "Courier New,monospace"
+        }
+
+    </script>
+
+    <style>
+
+        body {
+            background-image: url("https://static.pexels.com/photos/872958/pexels-photo-872958.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-top: 10%;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Verdana", sans-serif;
+            font-weight: bold;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: darkgray;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropbtn {
+            box-sizing: border-box;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+        }
+
+        textarea {
+            display: block;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #areaDiv {
+            width: 250px;
+            height: 80px;
+        }
+
+        .btn {
+            box-sizing: border-box;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Text Editor 2.0</h1>
+
+<div class="options">
+    <input class="btn" value="Bold" type="button" onclick="makeBold()">
+
+    <input class="btn" value="Italic" type="button" onclick="makeItalic()">
+
+    <input class="btn" value="Underline" type="button" onclick="makeUnderline()">
+</div>
+
+<center>
+    <div class="dropdown">
+        <button class="dropbtn">Select Colour</button>
+        <div class="dropdown-content">
+            <input class="btn" value="Black" type="button" onclick="makeBlack()">
+            <input class="btn" value="White" type="button" onclick="makeWhite()">
+            <input class="btn" value="Green" type="button" onclick="makeGreen()">
+            <input class="btn" value="Blue" type="button" onclick="makeBlue()">
+        </div>
+    </div>
+</center>
+
+<center>
+    <div class="dropdown">
+        <button class="dropbtn">Select Font Style</button>
+        <div class="dropdown-content">
+            <input class="btn" value="Arial" type="button" onclick="makeArial()">
+            <input class="btn" value="Times New Roman" type="button" onclick="makeTimes()">
+            <input class="btn" value="Comic Sans" type="button" onclick="makeComic()">
+            <input class="btn" value="Courier Italic" type="button" onclick="makeCourier()">
+        </div>
+    </div>
+</center>
+
+<textarea id="areaDiv"></textarea>
+
+</body>
+</html>
